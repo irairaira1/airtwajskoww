@@ -105,6 +105,166 @@
       </div>
     </section>
 
+
+    <section id="testimonials" class="w-screen overflow-hidden px-[50px] lg:pt-[60px] pb-[120px]">
+      <div class="container mx-auto">
+        <div class="-mx-4 flex flex-wrap">
+          <div class="w-full px-4">
+            <div class="mx-auto mb-[60px] max-w-[510px] text-center">
+              <span class="text-blackColor mb-2 block text-lg font-semibold">
+               iRashed
+              </span>
+              <h2
+                class="text-primaryColor mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]"
+              >
+               about Me
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="
+            {
+            slides: ['1','2','3','4'],
+            activeSlide: 1,
+            activeButton: 'w-[30px]',
+            button: 'w-[10px]'
+            }
+            "
+        >
+          <div class="relative flex justify-center">
+            <div
+              class="relative w-full md:w-11/12 lg:w-10/12 xl:w-8/12 xl:pb-0"
+            >
+              <div
+                class="snap xs:max-w-[368px] flex-no-wrap mx-auto flex h-auto w-full max-w-[300px] overflow-hidden transition-all sm:max-w-[508px] md:max-w-[630px] lg:max-w-[738px] 2xl:max-w-[850px]"
+                x-ref="carousel"
+              >
+                <div
+                  class="xs:min-w-[368px] mx-auto h-full min-w-[300px] sm:min-w-[508px] sm:p-6 md:min-w-[630px] lg:min-w-[738px] 2xl:min-w-[850px]"
+                >
+                  <div class="w-full items-center md:flex">
+                    
+                    <div class="w-full">
+                      <div>
+                        <p
+                          class=" mb-11 text-base font-medium italic sm:text-lg"
+                        >
+                        I am passionate about crafting exceptional digital experiences through web development. My journey as a developer began in Jordan, and now I bring my skills and creativity to the vibrant tech scene in Canada.
+                        </p>
+                        <h4 class="text-dark text-xl font-semibold">
+                         about me 
+                        </h4>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="xs:min-w-[368px] mx-auto h-full min-w-[300px] sm:min-w-[508px] sm:p-6 md:min-w-[630px] lg:min-w-[738px] 2xl:min-w-[850px]"
+                >
+                  <div class="w-full items-center md:flex">
+                    
+                    <div class="w-full">
+                      <div>
+                        <p
+                          class=" mb-11 text-base font-medium italic sm:text-lg"
+                        >
+                         
+  I am proud to serve as a valued member of the PUBG MENA team, contributing my skills and expertise to the dynamic world of esports and gaming.
+                        </p>
+                        <h4 class="text-dark text-xl font-semibold">
+                        About me
+                        </h4>
+           
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="xs:min-w-[368px] mx-auto h-full min-w-[300px] sm:min-w-[508px] sm:p-6 md:min-w-[630px] lg:min-w-[738px] 2xl:min-w-[850px]"
+                >
+                  <div class="w-full items-center md:flex">
+                   
+                    <div class="w-full">
+                      <div>
+                        
+                        <p
+                          class="text-body-color mb-11 text-base font-medium italic sm:text-lg"
+                        >
+                     When I'm not immersed in the world of coding and development, I can often be found engaging with the gaming community. As a passionate gamer, I enjoy leveling up not just in code but also in the virtual worlds of video games.
+                        <h4 class="text-dark text-xl font-semibold">
+                          About me
+                        </h4>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="xs:min-w-[368px] mx-auto h-full min-w-[300px] sm:min-w-[508px] sm:p-6 md:min-w-[630px] lg:min-w-[738px] 2xl:min-w-[850px]"
+                >
+                  <div class="w-full items-center md:flex">
+                   
+                    <div class="w-full">
+                      <div>
+                        
+                        <p
+                          class="text-body-color mb-11 text-base font-medium italic sm:text-lg"
+                        >
+                      coming soon
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute left-0 right-0 bottom-0 flex items-center justify-center lg:pl-[120px] 2xl:pl-0"
+              >
+                <button
+                  class="text-primaryColor shadow-input mx-1 flex h-12 w-12 items-center justify-center rounded-full bg-white"
+                  @click="$refs.carousel.scrollLeft = $refs.carousel.scrollLeft - ($refs.carousel.scrollWidth / slides.length); activeSlide -= 1"
+                >
+                  <svg
+                    width="15"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    class="fill-current"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.24264 11.8033L0.46967 7.03037C0.176777 6.73748 0.176777 6.2626 0.46967 5.96971L5.24264 1.19674C5.53553 0.903845 6.01041 0.903845 6.3033 1.19674C6.59619 1.48963 6.59619 1.96451 6.3033 2.2574L2.81066 5.75004H14C14.4142 5.75004 14.75 6.08583 14.75 6.50004C14.75 6.91425 14.4142 7.25004 14 7.25004H2.81066L6.3033 10.7427C6.59619 11.0356 6.59619 11.5104 6.3033 11.8033C6.01041 12.0962 5.53553 12.0962 5.24264 11.8033Z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="text-primaryColor shadow-input mx-1 flex h-12 w-12 items-center justify-center rounded-full bg-white "
+                  @click="$refs.carousel.scrollLeft = $refs.carousel.scrollLeft + ($refs.carousel.scrollWidth / slides.length); activeSlide += 1"
+                >
+                  <svg
+                    width="15"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    class="fill-current"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9.75736 11.8033L14.5303 7.03037C14.8232 6.73748 14.8232 6.2626 14.5303 5.96971L9.75736 1.19674C9.46447 0.903845 8.98959 0.903845 8.6967 1.19674C8.40381 1.48963 8.40381 1.96451 8.6967 2.2574L12.1893 5.75004H1C0.585786 5.75004 0.25 6.08583 0.25 6.50004C0.25 6.91425 0.585786 7.25004 1 7.25004H12.1893L8.6967 10.7427C8.40381 11.0356 8.40381 11.5104 8.6967 11.8033C8.98959 12.0962 9.46447 12.0962 9.75736 11.8033Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <section id="blog" class="w-screen overflow-hidden lg:px-[60px]">
       <div class="container mx-auto">
         <div class="-mx-4 flex flex-wrap">
