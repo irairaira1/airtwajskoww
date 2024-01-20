@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iRashed</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="./assets/imgs/main-imgs/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body class="bg-gradient-to-t from-lighterColor">
+
+    <a href="#hero" id="scroll-btn" class="hidden fixed h-11 w-10 text-xl pt-2 rounded-full bg-secondaryColor bottom-5 right-5 text-center text-primaryColor z-50 shadow-lighterColor">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <nav id="nav-bar" class="fixed w-screen h-24 py-5 z-50 bg-whiteColor bg-opacity-50 backdrop-blur-lg"> 
+      <div class="flex flex-wrap px-12 container items-center justify-between">
+        <div class="pt-2 w-16 h-16 bg-primaryColor rounded-full">
+          <img class="p-3 pt-2.5" src="./assets/imgs/main-imgs/irasheds.png" alt="logo" />
+        </div>
+        <div class="hidden text-primaryColor text-lg mx-auto space-x-4 md:flex">
+          <a href="#hero" class="hover:underline hover:underline-offset-[10px]">Home</a>
+          <a href="aboutme.html" class="hover:underline hover:underline-offset-[10px]">About</a>
+          <a href="#blog" class="hover:underline hover:underline-offset-[10px]">Projects</a>
+        </div>
+        
+        <div id="hamburgerMenu" class="z-20 flex flex-col space-y-1 md:hidden cursor-pointer">
+          <span class="w-6 h-0.5 bg-primaryColor"></span>
+          <span class="w-6 h-0.5 bg-primaryColor"></span>
+          <span class="w-6 h-0.5 bg-primaryColor"></span>
+        </div>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden">
+        <div class="absolute z-20 flex flex-col transition-all text-center text-primaryColor py-8 rounded-md space-y-6 font-bold bg-lighterColor sm:w-auto sm:self-center left-6 right-6 drop-shadow-[0_10px_15px_rgba(83,51,232,0.2)]">
+          <a href="#hero" class="hover:underline hover:underline-offset-[10px]">Home</a>
+          <a href="#about" class="hover:underline hover:underline-offset-[10px]">About</a>
+          <a href="#skills" class="hover:underline hover:underline-offset-[10px]">Skills</a>
+          <a href="#portfolio" class="hover:underline hover:underline-offset-[10px]">Portfolio</a>
+          <a href="#blog" class="hover:underline hover:underline-offset-[10px]">  <p>rojects</p></a>
+        </div>
+      </div>
+    </nav>
+
+    <section id="hero" class="relative flex flex-col md:flex-row justify-center text-center md:text-left h-screen w-full md:bg-gradient-to-t md:from-lighterColor">
+      <span class="absolute 
+      rounded-md
+      bg-secondaryColor
+      shadow-lg
+      shadow-secondaryColor/50
+      lg:top-[15em]
+      lg:right-[35em]
+      justify-center
+      items-center">
+     
+      </i>
+      </span>
+      <span class="absolute 
+     rounded-md
+     bg-secondaryColor
+     shadow-lg
+     shadow-secondaryColor/50
+     top-[30em]
+     right-0
+     md:top-[20em]
+     md:right-[2em]
+     justify-center
+     items-center">
+    
+     </i>
+      </span> 
+      <div class="flex-2 grid grid-col-2 lg:grid-rows-2 px-6">
+        <div class="h-72 text-primaryColor md:pl-48 pt-36 md:pt-72 space-y-4">
+          <h2 class="md:inline text-lg md:text-2xl">Hello, I am </h2>
+          <h1 class="inline text-3xl md:text-5xl font-bold">iRashed</h1>
+          <div>
+            <h2 class="block md:inline text-lg md:text-2xl">I'm </h2>
+            <h1 class="block md:inline text-3xl md:text-5xl font-bold" id="text"></h1>
+        </div>
+      </div>
+      <div class="flex flex-col md:block md:pl-24 md:ml-24 mt-[50px] md:mt-24">
+        <a href="#" class="md:mr-[20px] md:mt-[20px] px-12 py-4 text-white text-xl bg-primaryColor rounded-md hover:underline hover:underline-offset-[8px]">
+         Working on A project ?
+        </a>
+        <a href="#" class="mt-[20px] px-12 py-4 text-white text-xl bg-primaryColor rounded-md hover:underline hover:underline-offset-[8px]">
+         Contact Me
+        </a>
+      </div>
+    </div>
+      <div class="flex-1 overflow-hidden">   
+      
+        <img class="md:absolute bottom-0 right-0 w-3/4 sm:w-[25em] lg:w-[38em]" src="./assets/imgs/main-imgs/irasheds.png" alt="hero" >
+      </div>
+    </section>
+
+    <section id="blog" class="w-screen overflow-hidden lg:px-[60px]">
+      <div class="container mx-auto">
+        <div class="-mx-4 flex flex-wrap">
+          <div class="w-full px-4">
+            <div class="mx-auto mb-[60px] max-w-[510px] text-center">
+              <span class="text-blackColor mb-2 block text-lg font-semibold">
+              Development
+              </span>
+              <h2
+                class="text-primaryColor mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]"
+              >
+                Latest Development
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap p-4">
+          <div class="w-full px-3 md:w-1/2 lg:w-1/3">
+            <div class="bg-white rounded mx-auto mb-10 max-w-[370px]">
+              <div class="mb-8 overflow-hidden rounded h-72">
+                <img
+                  src="./assets//imgs/projects/emojify.png"
+                  alt="image"
+                  class="w-full h-auto"
+                />
+              </div>
+              <div>
+                <span
+                  class="bg-secondaryColor m-4 mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-primaryColor"
+                >
+                 Nov 27 , 2022
+                </span>
+                <h3>
+                  <a
+                    href="#"
+                    class="text-dark p-4 hover:text-primary inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl"
+                  >
+                Emojify Bot
+                  </a>
+                </h3>
+                <p class="text-base px-4">
+                  A bot that let you discover unique emojis from diverse servers , and enhance your own server expression.
+                </p>
+                <a href="#" target="_blank" class="m-4 mb-5 inline-block px-8 py-3 text-white text-md rounded-md hover:underline bg-primaryColor hover:underline-offset-[8px]">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-3 md:w-1/2 lg:w-1/3">
+            <div class="bg-white rounded mx-auto mb-10 max-w-[370px]">
+              <div class="mb-8 overflow-hidden rounded h-72">
+                <img
+                  src="./assets/imgs/projects/scfdash.png"
+                  alt="image"
+                  class="w-full h-auto"
+                />
+              </div>
+              <div>
+                <span
+                  class="bg-secondaryColor m-4 mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-primaryColor"
+                >
+                 Nov 22 , 2023
+                </span>
+                <h3>
+                  <a
+                    href="#"
+                    class="text-dark p-4 hover:text-primary inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl"
+                  >
+                  SCF DASHBOARD
+                  </a>
+                </h3>
+                <p class="text-base px-4">
+                 A Dashboard used for the "SCF" project 
+                </p>
+                <a href="#" target="_blank" class="m-4 mb-5 inline-block px-8 py-3 text-white text-md rounded-md hover:underline bg-primaryColor hover:underline-offset-[8px]">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-3 md:w-1/2 lg:w-1/3">
+            <div class="bg-white rounded mx-auto mb-10 max-w-[370px]">
+              <div class="mb-8 overflow-hidden rounded h-72">
+                <img
+                  src="./assets/imgs/projects/c.png"
+                  alt="image"
+                  class="w-full h-auto"
+                />
+              </div>
+              <div>
+                <span
+                  class="bg-secondaryColor m-4 mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-primaryColor"
+                >
+                  Coming soon
+                </span>
+                <h3>
+                  <a
+                    href="#"
+                    class="text-dark p-4 hover:text-primary inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl"
+                  >
+                  Planting system
+                  </a>
+                </h3>
+                <p class="text-base px-4">
+                  Planting System using Raspberry pi & Arduino with a dashboard and sensors
+                </p>
+                <a href="#" target="_blank" class="m-4 mb-5 inline-block px-8 py-3 text-white text-md rounded-md hover:underline bg-primaryColor hover:underline-offset-[8px]">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+     <section id="contact" class="w-screen relative z-10 overflow-hidden py-20 lg:py-[60px]">
+      <div class="-mx-4 flex flex-wrap">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-[60px] max-w-[510px] text-center">
+            <span class="text-blackColor mb-2 block text-lg font-semibold">
+              Contact Me
+            </span>
+            <h2
+              class="text-primaryColor mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]"
+            >
+            
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="container px-12 mx-auto">
+        <div class="-mx-4 flex flex-wrap lg:justify-between">
+          <div class="w-full px-4 lg:w-2/3 xl:w-5/12">
+            <div class="mb-12 lg:mb-0">
+              <h2
+                class="text-primaryColor mb-6 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]"
+              >
+              YOU ARE WELCOMED TO CONTACT ME ABOUT HELP OR HAVING A PROJECT!
+              </h2>
+              <div class="mb-8 flex w-full max-w-[370px]">
+                <div
+                  class="r-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden sm:h-[70px] sm:max-w-[70px]"
+                >
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                </div>
+                <div class="w-full">
+                  <h4 class="text-dark mb-1 text-xl font-bold">Discord</h4>
+                  <p class="text-body-color text-base">@02_3</p>
+                </div>
+              </div>
+              <div class="mb-8 flex w-full max-w-[370px]">
+                <div
+                  class="r-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden sm:h-[70px] sm:max-w-[70px]"
+                >
+                <i class="fa-solid fa-envelope text-xl"></i>
+                </div>
+                <div class="w-full">
+                  <h4 class="text-dark mb-1 text-xl font-bold">Email</h4>
+                  <p class="text-body-color text-base">r@irasheds.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full mr-3 px-4 lg:w-1/3 xl:w-6/12">
+            <div class="relative rounded-lg bg-white p-8 shadow-lg shadow-primaryColor/15 sm:p-12">
+              <form>
+                <div class="mb-6 bg-lighterColor border  rounded-md">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    class="w-full rounded  py-3 px-[14px] text-base outline-none"
+                  />
+                </div>
+                <div class="mb-6 border rounded-md">
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    class="w-full rounded  py-3 px-[14px] text-base outline-none"
+                  />
+                </div>
+                <div class="mb-6 border rounded-md">
+                  <input
+                    type="text"
+                    placeholder="Your Phone"
+                    class="w-full rounded  py-3 px-[14px] text-base outline-none"
+                  />
+                </div>
+                <div class="mb-6 border  rounded-md">
+                  <textarea
+                    rows="6"
+                    placeholder="Your Message"
+                    class="w-full resize-none rounded  py-3 px-[14px] text-base outline-none"
+                  ></textarea>
+                </div>
+                <div>
+                  <button
+                    type="submit"
+                    class="bg-primaryColor w-full rounded border p-3 text-white transition hover:bg-opacity-90"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+      <footer class="flex flex-col text-center justify-center  text-white mt-9 py-12">
+          <div class="flex justify-center text-primaryColor">
+            <img src="./assets/imgs/main-imgs/irasheds.png" class="w-24 h-24 p-1 border-secondaryColor border-2 rounded-full" alt="me">
+          </div>
+          <div class="flex justify-center text-primaryColor text-lg p-4">
+           
+            </a>
+            <a href="https://github.com/mayaramein" target="_blank" class="mr-9">
+              <i class="fa-brands fa-github hover:border-2 hover:border-secondaryColor p-3 rounded-full"></i>
+            </a>
+            <a href="https://www.behance.net/mayaramein" target="_blank" class="mr-9">
+              <i class="fa-brands fa-discord hover:border-2 hover:border-secondaryColor p-3 rounded-full"></i>
+            </a>
+            <a href="https://instagram.com/mayaramein" target="_blank" class="mr-9">
+              <i class="fa-brands fa-tiktok hover:border-2 hover:border-secondaryColor p-3 rounded-full"></i>
+            </a>
+          </div>
+        <div class="p-3 text-primaryColor">
+          © 2024 by @iRasheds
+        </div>
+      </footer>  
+    
+    <!-- =========== JS =========== -->
+    <script type="text/javascript" src="assets/js/index.js"></script>
+  </body>
+</html>
