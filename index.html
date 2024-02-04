@@ -1,325 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iRashed</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Page Information
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>LittleLink</title>
-  <meta name="description" content="https://littlelink.io">
-  <meta name="author" content="Seth Cottle">
+    <link rel="icon" href="./assets/imgs/main-imgs/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-
-    <!-- Themes:
-            Auto:   css/skeleton-auto.css
-            Light:  css/skeleton-light.css
-            Dark:   css/skeleton-dark.css
-     -->
-    <link rel="stylesheet" href="css/skeleton-auto.css">
-
-    <!-- Brand Styles -->
-    <link rel="stylesheet" href="css/brands.css">
-
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/0a344d9a73748c446737190e23b2392e.jpg">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
+<body class="bg-gradient-to-t from-lighterColor">
 
-<body>
+    <a href="#hero" id="scroll-btn" class="hidden fixed h-11 w-10 text-xl pt-2 rounded-full bg-secondaryColor bottom-5 right-5 text-center text-primaryColor z-50 shadow-lighterColor">
+      <i class="fas fa-angle-up"></i>
+    </a>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="column" style="margin-top: 10%">
+    <nav id="nav-bar" class="fixed w-screen h-24 py-5 z-50 bg-whiteColor bg-opacity-50 backdrop-blur-lg"> 
+      <div class="flex flex-wrap px-12 container items-center justify-between">
+        <div class="pt-2 w-16 h-16 bg-primaryColor rounded-full">
+          <img class="p-3 pt-2.5" src="./assets/imgs/main-imgs/irasheds.png" alt="logo" />
+        </div>
+        <div class="hidden text-primaryColor text-lg mx-auto space-x-4 md:flex">
+          <a href="#hero" class="hover:underline hover:underline-offset-[10px]">Home</a>
+          <a href="aboutme.html" class="hover:underline hover:underline-offset-[10px]">About</a>
+          <a href="#blog" class="hover:underline hover:underline-offset-[10px]">Projects</a>
+        </div>
+        
+        <div id="hamburgerMenu" class="z-20 flex flex-col space-y-1 md:hidden cursor-pointer">
+          <span class="w-6 h-0.5 bg-primaryColor"></span>
+          <span class="w-6 h-0.5 bg-primaryColor"></span>
+          <span class="w-6 h-0.5 bg-primaryColor"></span>
+        </div>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden">
+        <div class="absolute z-20 flex flex-col transition-all text-center text-primaryColor py-8 rounded-md space-y-6 font-bold bg-lighterColor sm:w-auto sm:self-center left-6 right-6 drop-shadow-[0_10px_15px_rgba(83,51,232,0.2)]">
+          <a href="#hero" class="hover:underline hover:underline-offset-[10px]">Home</a>
+          <a href="aboutme.html" class="hover:underline hover:underline-offset-[10px]">About</a>
+          <a href="#blog" class="hover:underline hover:underline-offset-[10px]">  <p>Projects</p></a>
+        </div>
+      </div>
+    </nav>
 
-        <!-- 
-
-          ## Getting Started with LittleLink
-
-          This page has been built with every pre-designed button available in LittleLink by default. You can rearrange and delete as needed.
-
-          You can add your own brand or others brands you may need in the `css/brands.css` file. 
-
-          You can add custom icons to `images/icons/...`. It is recommended to use a 24x24 .SVG.
-
-          Edit the "Your Image Here" section to add your own personal branding, like a picture of yourself or your brand logo!
-
-          Edit the "Title" section to change the page heading. You can use something like your name, your social handle, or your brand name.
-
-          Edit the "Short Bio" section tell users about yourself or your brand.
-
-        -->
-
-        <!-- Your Image Here -->
-        <img src="images/0a344d9a73748c446737190e23b2392e.jpg" class="avatar" srcset="images/0a344d9a73748c446737190e23b2392e.jpg 2x" alt="">
-
-        <!-- Title -->
-        <h1 role="heading">iRashed</h1>
-
-        <!-- Short Bio -->
-        <p>My links <a href="irasheds.com" target="_blank" rel="noopener" role="link"></a> </p>
-
-        <!--
-
-          ## Breaking down <a> attributes:
-          
-          1.) class="button button-default" | The first "button" here is telling this <a> tag that it should make this element a button and applies the default styling in `css/brands.css`.
-          The second portion, button-default, is declaring the specific brand style you would like to apply. Here we're applying the "default" style and color.
-          If you want to make this button to use the brand colors for Discord, just change "button-default" to "button-discord". Brands are found in `css/brands.css`. You can always edit & add your own there.
-
-          2.) Replace the # in href="#" with the desired target URL for the button.
-
-          3.) target="_blank" | This attribute opens links in a new tab. Remove this attribute to prevent links from opening in a new tab.
-
-          4.) rel="noopener" | This attribute instructs the browser to navigate to the target resource without granting the new browsing context access to the document that opened it.
-          This is especially useful when opening untrusted links. https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/noopener
-
-          5.) role="button" | The button role identifies an element as a button to assistive technology such as screen readers.
-
-          ## Breaking down the <img> attributes:
-          
-          1.) class="icon" | This class is telling the <img> tag that it should use the styling for icons found in `css/brands.css`.
-
-          2.) src="images/icons/[icon-name].svg" | This defines the icon you would like to display from the 'images/icons/' folder. For example, you can change this to src="images/icons/discord.svg" to use the Discord icon.
-          Add your own 24x24 icons to the "icons" folder to reference them. We recommend providing a SVG.
-
-          3.) alt="" | Since the text at the end of the snippet, "..>[Button Text]</a><br>", explains what the button is, we use "alt=""" to nullify the icon annoucement from the accessibility tree. 
-          This can improve the experience for assistive technology users by hiding what is essentially duplicated
-
-        -->
-
-        <!-- Dev.to -->
-        <a class="button button-dev-to" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/dev-to.svg" alt="">Dev.to</a><br>
-
-        <!-- Discord -->
-        <a class="button button-discord" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/discord.svg" alt="">Discord</a><br>
-
-        <!-- Dribbble -->
-        <a class="button button-dribbble" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/dribbble.svg" alt="">Dribbble</a><br>
-
-        <!-- GitHub -->
-        <a class="button button-github" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/github.svg" alt="">GitHub</a><br>
-
-        <!-- GitLab -->
-        <a class="button button-gitlab" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/gitlab.svg" alt="">GitLab</a><br>
-       
-        <!-- Instagram -->
-        <a class="button button-instagram" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/instagram.svg" alt="">Instagram</a><br>
-
-        <!-- Ko-fi -->
-        <a class="button button-ko-fi" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/ko-fi.svg" alt="">Ko-fi</a><br>
-
-        <!-- Line -->
-        <a class="button button-line" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/line.svg" alt="">Line</a><br>
-
-        <!-- LinkedIn -->
-        <a class="button button-linked" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/linkedin.svg" alt="">LinkedIn</a><br>
-
+    <section id="hero" class="relative flex flex-col md:flex-row justify-center text-center md:text-left h-screen w-full md:bg-gradient-to-t md:from-lighterColor">
+      <span class="absolute 
+      rounded-md
+      bg-secondaryColor
+      shadow-lg
+      shadow-secondaryColor/50
+      lg:top-[15em]
+      lg:right-[35em]
+      justify-center
+      items-center">
      
-        <!-- PayPal -->
-        <a class="button button-paypal" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/paypal.svg" alt="">PayPal</a><br>
-
-        <!-- Pinterest -->
-        <a class="button button-pinterest" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/pinterest.svg" alt="">Pinterest</a><br>
-
-        <!-- Post.news -->
-        <a class="button button-post-news" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/post-news.svg" alt="">Post.news</a><br>
-
-        <!-- Product Hunt -->
-        <a class="button button-product-hunt" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/product-hunt.svg" alt="">Product Hunt</a><br>
-
-        <!-- Read.cv -->
-        <a class="button button-read-cv" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/read-cv.svg" alt="">Read.cv</a><br>
-
-        <!-- Redbubble -->
-        <a class="button button-redbubble" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/redbubble.svg" alt="">Redbubble</a><br>
-
-        <!-- Reddit -->
-        <a class="button button-reddit" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/reddit.svg" alt="">Reddit</a><br>
-
-        <!-- Shop -->
-        <a class="button button-shop" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/shop.svg" alt="">Buy with Shop</a><br>
-
-        <!-- Signal -->
-        <a class="button button-signal" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/signal.svg" alt="">Signal</a><br>
-
-        <!-- Skoob -->
-        <a class="button button-skoob" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/skoob.svg" alt="">Skoob</a><br>
-
-        <!-- Slack -->
-        <a class="button button-slack" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/slack.svg" alt="">Join Slack</a><br>
-
-        <!-- Snapchat -->
-        <a class="button button-snapchat" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/snapchat.svg" alt="">Snapchat</a><br>
-
-        <!-- SoundCloud -->
-        <a class="button button-soundcloud" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/soundcloud.svg" alt="">SoundCloud</a><br>
-
-        <!-- Spotify -->
-        <a class="button button-spotify" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/spotify.svg" alt="">Listen on Spotify</a><br>
-
-        <!-- Spotify Alt -->
-        <a class="button button-spotify-alt" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/spotify-alt.svg" alt="">Listen on Spotify</a><br>
-
-        <!-- Square -->
-        <a class="button button-square" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/square.svg" alt="">Buy with Square</a><br>
-
-        <!-- Steam Dark -->
-        <a class="button button-steam-dark" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/steam.svg" alt="">Steam</a><br>
-
-        <!-- Steam -->
-        <a class="button button-steam" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/steam.svg" alt="">Steam</a><br>
-
-        <!-- Strava -->
-        <a class="button button-strava" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/strava.svg" alt="">Strava</a><br>
-
-        <!-- Substack -->
-        <a class="button button-substack" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/substack.svg" alt="">Substack</a><br>
-
-        <!-- Telegram -->
-        <a class="button button-telegram" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/telegram.svg" alt="">Telegram</a><br>
-
-        <!-- Threads -->
-        <a class="button button-threads" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/threads.svg" alt="">Threads</a><br>
-
-        <!-- Threema -->
-        <a class="button button-threema" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/threema.svg" alt="">Threema</a><br>
-
-        <!-- TikTok -->
-        <a class="button button-tiktok" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/tiktok.svg" alt="">TikTok</a><br>
-
-        <!-- Trakt -->
-        <a class="button button-trakt" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/trakt.svg" alt="">Trakt</a><br>
-
-        <!-- Trello -->
-        <a class="button button-trello" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/trello.svg" alt="">Trello</a><br>
-
-        <!-- Tumblr -->
-        <a class="button button-tumb" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/tumblr.svg" alt="">Tumblr</a><br>
-
-        <!-- Twitch -->
-        <a class="button button-twitch" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/twitch.svg" alt="">Twitch</a><br>
-
-        <!-- Twitter (archiving soon, see 'X') -->
-        <a class="button button-twit" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/twitter.svg" alt="">Twitter</a><br>
-
-        <!-- Unsplash -->
-        <a class="button button-unsplash" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/unsplash.svg" alt="">Unsplash</a><br>
-
-        <!-- Untappd -->
-        <a class="button button-untappd" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/untappd.svg" alt="">Untappd</a><br>
-
-        <!-- Upwork -->
-        <a class="button button-upwork" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/upwork.svg" alt="">Upwork</a><br>
-
-        <!-- Venmo -->
-        <a class="button button-venmo" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/venmo.svg" alt="">Venmo</a><br>
-
-        <!-- Vimeo -->
-        <a class="button button-vimeo" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/vimeo.svg" alt="">Vimeo</a><br>
-
-        <!-- VRChat -->
-        <a class="button button-vrchat" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/vrchat.svg" alt="">VRChat</a><br>
-
-        <!-- VSCO -->
-        <a class="button button-vsco" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/vsco.svg" alt="">VSCO</a><br>
-
-        <!-- WhatsApp -->
-        <a class="button button-whatsapp" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/whatsapp.svg" alt="">WhatsApp</a><br>
-
-        <!-- WordPress -->
-        <a class="button button-wordpress" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/wordpress.svg" alt="">WordPress</a><br>
-
-        <!-- X -->
-        <a class="button button-x" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/x.svg" alt="">Follow on X</a><br>
-
-        <!-- Xing -->
-        <a class="button button-xing" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/xing.svg" alt="">Xing</a><br>
-
-        <!-- YouTube -->
-        <a class="button button-yt" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/youtube.svg" alt="">YouTube</a><br>        
-
-        <!-- YouTube Music -->
-        <a class="button button-yt" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/youtube-music.svg" alt="">Listen on YouTube Music</a><br>
-
-        <!-- Zoom -->
-        <a class="button button-zoom" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/zoom.svg" alt="">Join Zoom Webinar</a><br>  
-
-        <!-- Generic Blog -->
-        <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-blog.svg" alt="">Read our blog</a><br>
-
-        <!-- Generic Calendar -->
-        <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-calendar.svg" alt="">Event RSVP</a><br>
-
-        <!-- Generic Cloud -->
-        <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-cloud.svg" alt="">Download File</a><br>
-
-        <!-- Generic Code -->
-        <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-code.svg" alt="">View the code</a><br>
-
-        <!-- Generic Computer -->
-        <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-computer.svg" alt="">Homelab Setup</a><br>
-
-        <!-- Generic Email -->
-        <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-email.svg" alt="">Email Us</a><br>
-
-        <!-- Generic Email Alt -->
-        <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-email-alt.svg" alt="">Email Us</a><br>
-
-        <!-- Generic Homepage -->
-        <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-homepage.svg" alt="">Visit Homepage</a><br>
-
-        <!-- Generic Map -->
-        <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-map.svg" alt="">Get Directions</a><br>
-
-        <!-- Generic Phone -->
-        <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-phone.svg" alt="">Call Us</a><br>
-
-        <!-- Generic Review -->
-        <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-review.svg" alt="">Leave us a review</a><br>
-
-        <!-- Generic RSS -->
-        <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-rss.svg" alt="">RSS Subscribe</a><br>
-
-        <!-- Generic Shopping Bag -->
-        <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-shopping-bag.svg" alt="">Visit Our Shop</a><br>
-                
-        <!-- Generic Shopping Tag -->
-        <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-shopping-tag.svg" alt="">10% Discount</a><br>
-
-        <!-- Generic SMS -->
-        <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-sms.svg" alt="">Send us a message</a><br>
-
-        <!-- Generic Website -->
-        <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-website.svg" alt="">Visit Website</a><br>
-
-        <br>
-        <!-- 
-            Footer:
-            This includes a link to privacy.html page which can be setup for your Privacy Policy.
-            This also includes a link to the LittleLink repository to make forking LittleLink easier.
-            You can edit or remove anything here to make your own footer.
-        -->
-        <p><a href="privacy.html">Privacy Policy</a> | Build your own by forking <a href="https://littlelink.io" target="_blank" rel="noopener" role="button">LittleLink</a>.</p>
-
+      </i>
+      </span>
+      <span class="absolute 
+     rounded-md
+     bg-secondaryColor
+     shadow-lg
+     shadow-secondaryColor/50
+     top-[30em]
+     right-0
+     md:top-[20em]
+     md:right-[2em]
+     justify-center
+     items-center">
+    
+     </i>
+      </span> 
+      <div class="flex-2 grid grid-col-2 lg:grid-rows-2 px-6">
+        <div class="h-72 text-primaryColor md:pl-48 pt-36 md:pt-72 space-y-4">
+          <h2 class="md:inline text-lg md:text-2xl">Hello, I am </h2>
+          <h1 class="inline text-3xl md:text-5xl font-bold">iRashed</h1>
+          <div>
+            <h2 class="block md:inline text-lg md:text-2xl">I'm </h2>
+            <h1 class="block md:inline text-3xl md:text-5xl font-bold" id="text"></h1>
+        </div>
+      </div>
+      <div class="flex flex-col md:block md:pl-24 md:ml-24 mt-[50px] md:mt-24">
+        <a href="#" class="md:mr-[20px] md:mt-[20px] px-12 py-4 text-white text-xl bg-primaryColor rounded-md hover:underline hover:underline-offset-[8px]">
+         Working on A project ?
+        </a>
+        <a href="#" class="mt-[20px] px-12 py-4 text-white text-xl bg-primaryColor rounded-md hover:underline hover:underline-offset-[8px]">
+         Contact Me
+        </a>
       </div>
     </div>
-  </div>
+      <div class="flex-1 overflow-hidden">   
+      
+        <img class="md:absolute bottom-0 right-0 w-3/4 sm:w-[25em] lg:w-[38em]" src="./assets/imgs/main-imgs/irasheds.png" alt="hero" >
+      </div>
+    </section>
 
-  <!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
 
+    <section id="testimonials" class="w-screen overflow-hidden px-[50px] lg:pt-[60px] pb-[120px]">
+      <div class="container mx-auto">
+        <div class="-mx-4 flex flex-wrap">
+          <div class="w-full px-4">
+            <div class="mx-auto mb-[60px] max-w-[510px] text-center">
+              <span class="text-blackColor mb-2 block text-lg font-semibold">
+               iRashed
+              </span>
+              <h2
+                class="text-primaryColor mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]"
+              >
+               about Me
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="
+            {
+            slides: ['1','2','3','4'],
+            activeSlide: 1,
+            activeButton: 'w-[30px]',
+            button: 'w-[10px]'
+            }
+            "
+        >
+          <div class="relative flex justify-center">
+            <div
+              class="relative w-full md:w-11/12 lg:w-10/12 xl:w-8/12 xl:pb-0"
+            >
+              <div
+                class="snap xs:max-w-[368px] flex-no-wrap mx-auto flex h-auto w-full max-w-[300px] overflow-hidden transition-all sm:max-w-[508px] md:max-w-[630px] lg:max-w-[738px] 2xl:max-w-[850px]"
+                x-ref="carousel"
+              >
+                <div
+                  class="xs:min-w-[368px] mx-auto h-full min-w-[300px] sm:min-w-[508px] sm:p-6 md:min-w-[630px] lg:min-w-[738px] 2xl:min-w-[850px]"
+                >
+                  <div class="w-full items-center md:flex">
+                    
+                    <div class="w-full">
+                      <div>
+                        <p
+                          class=" mb-11 text-base font-medium italic sm:text-lg"
+                        >
+                        I am passionate about crafting exceptional digital experiences through web development. My journey as a developer began in Jordan, and now I bring my skills and creativity to the vibrant tech scene in Canada.
+                        </p>
+                        <h4 class="text-dark text-xl font-semibold">
+                         about me 
+                        </h4>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="xs:min-w-[368px] mx-auto h-full min-w-[300px] sm:min-w-[508px] sm:p-6 md:min-w-[630px] lg:min-w-[738px] 2xl:min-w-[850px]"
+                >
+                  <div class="w-full items-center md:flex">
+                    
+                    <div class="w-full">
+                      <div>
+                        <p
+                          class=" mb-11 text-base font-medium italic sm:text-lg"
+                        >
+                         
+  I am proud to serve as a valued member of the PUBG MENA team, contributing my skills and expertise to the dynamic world of esports and gaming.
+                        </p>
+                        <h4 class="text-dark text-xl font-semibold">
+                        About me
+                        </h4>
+           
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="xs:min-w-[368px] mx-auto h-full min-w-[300px] sm:min-w-[508px] sm:p-6 md:min-w-[630px] lg:min-w-[738px] 2xl:min-w-[850px]"
+                >
+                  <div class="w-full items-center md:flex">
+                   
+                    <div class="w-full">
+                      <div>
+                        
+                        <p
+                          class="text-body-color mb-11 text-base font-medium italic sm:text-lg"
+                        >
+                     When I'm not immersed in the world of coding and development, I can often be found engaging with the gaming community. As a passionate gamer, I enjoy leveling up not just in code but also in the virtual worlds of video games.
+                        <h4 class="text-dark text-xl font-semibold">
+                          About me
+                        </h4>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="xs:min-w-[368px] mx-auto h-full min-w-[300px] sm:min-w-[508px] sm:p-6 md:min-w-[630px] lg:min-w-[738px] 2xl:min-w-[850px]"
+                >
+                  <div class="w-full items-center md:flex">
+                   
+                    <div class="w-full">
+                      <div>
+                        
+                        <p
+                          class="text-body-color mb-11 text-base font-medium italic sm:text-lg"
+                        >
+                      coming soon
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute left-0 right-0 bottom-0 flex items-center justify-center lg:pl-[120px] 2xl:pl-0"
+              >
+                <button
+                  class="text-primaryColor shadow-input mx-1 flex h-12 w-12 items-center justify-center rounded-full bg-white"
+                  @click="$refs.carousel.scrollLeft = $refs.carousel.scrollLeft - ($refs.carousel.scrollWidth / slides.length); activeSlide -= 1"
+                >
+                  <svg
+                    width="15"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    class="fill-current"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.24264 11.8033L0.46967 7.03037C0.176777 6.73748 0.176777 6.2626 0.46967 5.96971L5.24264 1.19674C5.53553 0.903845 6.01041 0.903845 6.3033 1.19674C6.59619 1.48963 6.59619 1.96451 6.3033 2.2574L2.81066 5.75004H14C14.4142 5.75004 14.75 6.08583 14.75 6.50004C14.75 6.91425 14.4142 7.25004 14 7.25004H2.81066L6.3033 10.7427C6.59619 11.0356 6.59619 11.5104 6.3033 11.8033C6.01041 12.0962 5.53553 12.0962 5.24264 11.8033Z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="text-primaryColor shadow-input mx-1 flex h-12 w-12 items-center justify-center rounded-full bg-white "
+                  @click="$refs.carousel.scrollLeft = $refs.carousel.scrollLeft + ($refs.carousel.scrollWidth / slides.length); activeSlide += 1"
+                >
+                  <svg
+                    width="15"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    class="fill-current"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9.75736 11.8033L14.5303 7.03037C14.8232 6.73748 14.8232 6.2626 14.5303 5.96971L9.75736 1.19674C9.46447 0.903845 8.98959 0.903845 8.6967 1.19674C8.40381 1.48963 8.40381 1.96451 8.6967 2.2574L12.1893 5.75004H1C0.585786 5.75004 0.25 6.08583 0.25 6.50004C0.25 6.91425 0.585786 7.25004 1 7.25004H12.1893L8.6967 10.7427C8.40381 11.0356 8.40381 11.5104 8.6967 11.8033C8.98959 12.0962 9.46447 12.0962 9.75736 11.8033Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="blog" class="w-screen overflow-hidden lg:px-[60px]">
+      <div class="container mx-auto">
+        <div class="-mx-4 flex flex-wrap">
+          <div class="w-full px-4">
+            <div class="mx-auto mb-[60px] max-w-[510px] text-center">
+              <span class="text-blackColor mb-2 block text-lg font-semibold">
+              Development
+              </span>
+              <h2
+                class="text-primaryColor mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]"
+              >
+                Latest Development
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap p-4">
+          <div class="w-full px-3 md:w-1/2 lg:w-1/3">
+            <div class="bg-white rounded mx-auto mb-10 max-w-[370px]">
+              <div class="mb-8 overflow-hidden rounded h-72">
+                <img
+                  src="./assets//imgs/projects/emojify.png"
+                  alt="image"
+                  class="w-full h-auto"
+                />
+              </div>
+              <div>
+                <span
+                  class="bg-secondaryColor m-4 mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-primaryColor"
+                >
+                 Nov 27 , 2022
+                </span>
+                <h3>
+                  <a
+                    href="#"
+                    class="text-dark p-4 hover:text-primary inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl"
+                  >
+                Emojify Bot
+                  </a>
+                </h3>
+                <p class="text-base px-4">
+                  A bot that let you discover unique emojis from diverse servers , and enhance your own server expression.
+                </p>
+                <a href="#" target="_blank" class="m-4 mb-5 inline-block px-8 py-3 text-white text-md rounded-md hover:underline bg-primaryColor hover:underline-offset-[8px]">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-3 md:w-1/2 lg:w-1/3">
+            <div class="bg-white rounded mx-auto mb-10 max-w-[370px]">
+              <div class="mb-8 overflow-hidden rounded h-72">
+                <img
+                  src="./assets/imgs/projects/scfdash.png"
+                  alt="image"
+                  class="w-full h-auto"
+                />
+              </div>
+              <div>
+                <span
+                  class="bg-secondaryColor m-4 mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-primaryColor"
+                >
+                 Nov 22 , 2023
+                </span>
+                <h3>
+                  <a
+                    href="#"
+                    class="text-dark p-4 hover:text-primary inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl"
+                  >
+                  SCF DASHBOARD
+                  </a>
+                </h3>
+                <p class="text-base px-4">
+                 A Dashboard used for the "SCF" project 
+                </p>
+                <a href="#" target="_blank" class="m-4 mb-5 inline-block px-8 py-3 text-white text-md rounded-md hover:underline bg-primaryColor hover:underline-offset-[8px]">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-3 md:w-1/2 lg:w-1/3">
+            <div class="bg-white rounded mx-auto mb-10 max-w-[370px]">
+              <div class="mb-8 overflow-hidden rounded h-72">
+                <img
+                  src="./assets/imgs/projects/c.png"
+                  alt="image"
+                  class="w-full h-auto"
+                />
+              </div>
+              <div>
+                <span
+                  class="bg-secondaryColor m-4 mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-primaryColor"
+                >
+                  Coming soon
+                </span>
+                <h3>
+                  <a
+                    href="#"
+                    class="text-dark p-4 hover:text-primary inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl"
+                  >
+                  Planting system
+                  </a>
+                </h3>
+                <p class="text-base px-4">
+                  Planting System using Raspberry pi & Arduino with a dashboard and sensors
+                </p>
+                <a href="#" target="_blank" class="m-4 mb-5 inline-block px-8 py-3 text-white text-md rounded-md hover:underline bg-primaryColor hover:underline-offset-[8px]">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+     <section id="contact" class="w-screen relative z-10 overflow-hidden py-20 lg:py-[60px]">
+      <div class="-mx-4 flex flex-wrap">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-[60px] max-w-[510px] text-center">
+            <span class="text-blackColor mb-2 block text-lg font-semibold">
+              Contact Me
+            </span>
+            <h2
+              class="text-primaryColor mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]"
+            >
+            
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="container px-12 mx-auto">
+        <div class="-mx-4 flex flex-wrap lg:justify-between">
+          <div class="w-full px-4 lg:w-2/3 xl:w-5/12">
+            <div class="mb-12 lg:mb-0">
+              <h2
+                class="text-primaryColor mb-6 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]"
+              >
+              YOU ARE WELCOMED TO CONTACT ME ABOUT HELP OR HAVING A PROJECT!
+              </h2>
+              <div class="mb-8 flex w-full max-w-[370px]">
+                <div
+                  class="r-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden sm:h-[70px] sm:max-w-[70px]"
+                >
+                <i class="fa-brands fa-discord text-2xl"></i>
+                </div>
+                <div class="w-full">
+                  <h4 class="text-dark mb-1 text-xl font-bold">Discord</h4>
+                  <p class="text-body-color text-base">@02_3</p>
+                </div>
+              </div>
+              <div class="mb-8 flex w-full max-w-[370px]">
+                <div
+                  class="r-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden sm:h-[70px] sm:max-w-[70px]"
+                >
+                <i class="fa-solid fa-envelope text-xl"></i>
+                </div>
+                <div class="w-full">
+                  <h4 class="text-dark mb-1 text-xl font-bold">Email</h4>
+                  <p class="text-body-color text-base">r@irasheds.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+          </div>
+        </div>
+      </div>
+    </section>
+  
+      <footer class="flex flex-col text-center justify-center  text-white mt-9 py-12">
+          <div class="flex justify-center text-primaryColor">
+            <img src="./assets/imgs/main-imgs/irasheds.png" class="w-24 h-24 p-1 border-secondaryColor border-2 rounded-full" alt="me">
+          </div>
+          <div class="flex justify-center text-primaryColor text-lg p-4">
+           
+            </a>
+            <a href="https://github.com/808o" target="_blank" class="mr-9">
+              <i class="fa-brands fa-github hover:border-2 hover:border-secondaryColor p-3 rounded-full"></i>
+            </a>
+            <a href="https://discord.com/users/734851759515631817" target="_blank" class="mr-9">
+              <i class="fa-brands fa-discord hover:border-2 hover:border-secondaryColor p-3 rounded-full"></i>
+            </a>
+            <a href="https://www.tiktok.com/@ut2n" target="_blank" class="mr-9">
+              <i class="fa-brands fa-tiktok hover:border-2 hover:border-secondaryColor p-3 rounded-full"></i>
+            </a>
+          </div>
+        <div class="p-3 text-primaryColor">
+          © 2024 by @iRasheds
+        </div>
+      </footer>  
+    
+    <!-- =========== JS =========== -->
+    <script type="text/javascript" src="assets/js/index.js"></script>
+  </body>
 </html>
