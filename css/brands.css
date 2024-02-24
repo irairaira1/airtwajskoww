@@ -688,7 +688,7 @@ button:hover,
 /* Reddit */
 .button.button-reddit {
   color: #FFFFFF;
-  background-color: #FF4500;
+  background-color: #67139487;
 }
 .button.button-reddit:hover,
 .button.button-reddit:focus {
@@ -840,8 +840,8 @@ button:hover,
 
 /* Threads */
 .button.button-threads {
-  color: #FFFFFF;
-  background-color: #000000;
+  color: #000000;
+  background-color: #ffffff;
   border: 1px solid #FFFFFF;
 }
 .button.button-threads:hover,
@@ -861,9 +861,9 @@ button:hover,
 
 /* TikTok */
 .button.button-tiktok {
-  color: #000000;
-  background-color: #ffffff;
-  border: 1px solid #FFFFFF;
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #000000;
 }
 .button.button-tiktok:hover,
 .button.button-tiktok:focus {
@@ -873,7 +873,7 @@ button:hover,
 /* Trakt */
 .button.button-trakt {
   color: #ffffff;
-  background-color: #ED1C24;
+  background-color: #ffffff;
 }
 .button.button-trakt:hover,
 .button.button-trakt:focus {
